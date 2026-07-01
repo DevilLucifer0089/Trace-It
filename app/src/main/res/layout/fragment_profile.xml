@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/md_primary"
+            app:title="My Profile"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/profile_menu" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/white"
+                android:paddingVertical="32dp"
+                android:paddingHorizontal="24dp">
+
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="96dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfilePic"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/ic_default_avatar"
+                        app:civ_border_width="3dp"
+                        app:civ_border_color="@color/md_primary"
+                        android:contentDescription="Profile picture" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabEditAvatar"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_camera_small"
+                        app:fabCustomSize="28dp"
+                        app:maxImageSize="14dp"
+                        android:layout_gravity="bottom|end"
+                        app:backgroundTint="@color/md_secondary"
+                        android:contentDescription="Edit profile picture" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rajesh Kumar"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/tvProfileEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rajesh@email.com"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/tvActiveCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="24sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/md_primary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Active"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/tvResolvedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textSize="24sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/md_secondary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resolved"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabIndicatorColor="@color/md_primary"
+                app:tabSelectedTextColor="@color/md_primary"
+                app:tabTextColor="@color/text_secondary">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_active_posts" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resolved_items" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUserPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="80dp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

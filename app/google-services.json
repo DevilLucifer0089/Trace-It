@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943784512883",
+    "project_id": "traceit-a052d",
+    "storage_bucket": "traceit-a052d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943784512883:android:05600b6289c87f58e30906",
+        "android_client_info": {
+          "package_name": "com.trinoka.traceit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2GJkbdqL6R3qeoHrZ9nvFZBrpK3nyOds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_primary">#4361EE</color>
+    <color name="md_primary_dark">#3F37C9</color>
+    <color name="md_primary_light">#4895EF</color>
+    <color name="md_primary_container">#EDF2FF</color>
+    <color name="md_on_primary_container">#3F37C9</color>
+
+    <color name="md_secondary">#4CC9F0</color>
+    <color name="md_secondary_container">#E0FBFC</color>
+
+    <color name="md_error">#F72585</color>
+    <color name="md_error_container">#FFEEF2</color>
+
+    <color name="status_lost_bg">#FFEEF2</color>
+    <color name="status_lost_text">#F72585</color>
+    <color name="status_found_bg">#DCFCE7</color>
+    <color name="status_found_text">#15803D</color>
+
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_surface_variant">#F1F3F5</color>
+    <color name="md_background">#F8F9FA</color>
+
+    <color name="bubble_sent">#4361EE</color>
+    <color name="bubble_received">#E9ECEF</color>
+    <color name="bubble_sent_text">#FFFFFF</color>
+    <color name="bubble_received_text">#212529</color>
+
+    <color name="text_primary">#212529</color>
+    <color name="text_secondary">#6C757D</color>
+    <color name="divider">#DEE2E6</color>
+    <color name="card_elevation_overlay">#F8F9FA</color>
+</resources>
